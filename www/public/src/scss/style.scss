@@ -1,0 +1,151 @@
+@import 'header';
+@import 'footer';
+
+// base
+$font-style: normal 18px sans-serif;
+$grey-color: #555;
+$white-color: #f5f5f5;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+	font: $font-style;
+	color: $grey-color;
+  line-height: 1.6;
+}
+
+a {
+	text-decoration: none;
+	opacity:0.75;
+	color: $white-color;
+}
+
+a:hover {
+	opacity:1;
+}
+
+a.btn {
+  background-color: #f0ecfc;
+  background-image: linear-gradient(315deg, #f0ecfc 0%, #c797eb 74%);
+  line-height: 42px;
+  border: none;
+  color: #4e1d74;
+  border-radius: 5px;
+  padding: 10px 25px;
+}
+
+//----------index.php----------
+
+// section
+section {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 80px;
+
+  h3.title {
+    text-transform: capitalize;
+    font: bold 32px "Open Sans", sans-serif;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  p {
+    max-width: 790px;
+    line-height: 1.8;
+    padding: 0 20px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  @media (max-width:800px) {
+    padding: 50px 20px;
+  }
+}
+
+
+// hero
+.hero {
+  position:relative;
+	justify-content: center;
+	text-align: center;
+	width:100%;
+	color: #fff;
+  background-color: #80a3db;
+
+
+  h1 {
+    font: bold 60px "Open Sans", sans-serif;
+    margin-bottom: 15px;
+  }
+
+  h3 {
+    font: normal 28px "Open Sans", sans-serif;
+    margin-bottom: 40px;
+  }
+
+  a.btn {
+    padding: 20px 46px;
+  }
+
+  @media (max-width: 800px){
+    min-height: 600px;
+
+    h1 {
+      font-size: 48px;
+    }
+
+    h3 {
+      font-size: 24px;
+    }
+
+    a.btn {
+      padding: 15px 40px;
+    }
+  }
+}
+
+.hero-content-area {
+  opacity: 0;
+  // Die Animation ist 1s lang.
+  // Die Animation heisst "slidefase".
+  // Die Animation fängt 1s verzögert an.
+  // der Ablauf der Animation ist "forwards". Nach der Ausführung springt es nicht zurück an den Anfang.
+	animation: 1s slidefade 1s forwards;
+}
+
+@keyframes slidefade {
+  100% {
+		opacity: 1;
+	}
+}
+
+.hero-small {
+	min-height: 40vh;
+}
+
+.hero-large {
+  min-height: 80vh;
+}
+
+// description
+.description {
+  figure {
+      padding: 20px;
+
+      img {
+        border-radius: 50%;
+        object-fit: cover;
+        width: 350px;
+        height: 350px;
+      }
+  }
+}
+
+
+
+
